@@ -244,7 +244,7 @@ Vue.component('view-post-page', {
             const reply = await contract.replies(replyId);
 
             this.replies.push({
-                createdAt: post.createdAt.toNumber(),
+                createdAt: reply.createdAt.toNumber(),
                 replyId: reply.replyId.toNumber(),
                 author: reply.author,
                 parentPostId: reply.parentPostId.toNumber(),
